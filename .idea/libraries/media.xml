@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="media">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../../JOGLwin/lib64/javax/media" />
+      <root url="jar://$PROJECT_DIR$/../../../../../JOGLwin/lib32/gluegen-rt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../JOGLwin/lib32/jogl.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

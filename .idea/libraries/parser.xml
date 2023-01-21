@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="parser">
+    <CLASSES>
+      <root url="file://C:/json-simple-1.1.1/org/json/simple/parser" />
+      <root url="jar://C:/JOGLwin/lib64/gluegen-rt.jar!/" />
+      <root url="jar://C:/JOGLwin/lib64/jogl.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
