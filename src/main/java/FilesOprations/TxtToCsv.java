@@ -6,9 +6,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
-
-
+/*
+//This class for 1- Read the student list on the system and convert it into a proper format .csv first criteria /doCsvFormat()/.
+                 2- Implement a function that prints all student data that exist in the CSV files that you generated before in section 1 /printStudentData()/.
+*/
 public class TxtToCsv {
+
     BufferedWriter bw = null;
     Scanner sc = null;
 
@@ -73,8 +76,6 @@ public class TxtToCsv {
 
     private void printStudentData(Path p1, Path p2) {
         String text;
-        //System.out.println("-------------------------------\nCurrent Student List\n-------------------------------");
-        // System.out.println("id name             Grade       email               address                         region  country");
 
         try {
             bw = Files.newBufferedWriter(p2);

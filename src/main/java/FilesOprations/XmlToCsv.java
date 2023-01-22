@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
+/* This class convert xml files to csv*/
 
 public class XmlToCsv extends TxtToCsv {
 
@@ -45,7 +46,8 @@ public class XmlToCsv extends TxtToCsv {
 
             // Get all the element by the tag name
             NodeList rowList = document.getElementsByTagName("row");
-
+            bw.write("id,Course Name,Instructor,Course duration,Course time,Location");
+            bw.newLine();
             for (int i = 0; i < rowList.getLength(); i++) {
                 Node row = rowList.item(i);
                 if (row.getNodeType() == Node.ELEMENT_NODE) {
@@ -54,9 +56,14 @@ public class XmlToCsv extends TxtToCsv {
                         Node detail = studentInfo.item(j);
                         if (detail.getNodeType() == Node.ELEMENT_NODE) {
                             Element detailElement = (Element) detail;
-                            String str=detailElement.getTextContent();
-                            bw.write(detailElement.getTextContent() + ",");
-                            System.out.println("     " + detailElement.getTagName() + ": " + detailElement.getTextContent());
+
+                            if (detailElement.getTagName() == "Location") {
+                                bw.write(detailElement.getTextContent());
+                                bw.newLine();
+                            } else {
+                                bw.write(detailElement.getTextContent() + ",");
+
+                            }
                         }
 
                     }
